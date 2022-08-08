@@ -42,9 +42,12 @@ function ENT:DrawTranslucent()
     for k,v in pairs( List ) do
     draw.DrawText(v, "Billboard Font", 600, 500 + k * 150, TBoardConfig.PlacementText, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
     end
+    if TBoardConfig.Underline == "true" then
+      surface.SetDrawColor(TBoardConfig.UnderlineColor)
+      surface.DrawRect(505, TBoardConfig.UnderlineY, 2050, TBoardConfig.UnderlineThickness)
       imgui.End3D2D()
+    else
+    imgui.End3D2D()
     end
+  end
 end
-
-
-
