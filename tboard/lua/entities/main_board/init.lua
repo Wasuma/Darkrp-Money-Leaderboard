@@ -28,7 +28,6 @@ function ENT:Initialize()
     self:SetSolid(SOLID_VPHYSICS)
     self:SetUseType(SIMPLE_USE)
     self:SetMaterial("Models/effects/vol_light001")
-    self:SetAngles(Angle(90, 90, 0))
  
     local phys = self:GetPhysicsObject()
     if( phys:IsValid() ) then
